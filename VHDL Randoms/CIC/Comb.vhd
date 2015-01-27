@@ -6,7 +6,7 @@ use IEEE.MATH_REAL.ALL;
 ENTITY Comb IS
     GENERIC(
         D_WIDTH_in  :POSITIVE := 2;
-        Truncation  :NATURAL  := 0;
+        Truncation  :NATURAL  := 0
     );
     PORT(
         RESET   :in  STD_LOGIC;
