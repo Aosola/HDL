@@ -13,7 +13,7 @@ ENTITY Comb IS
         CLK     :in  STD_LOGIC;
         
         X       :in  SIGNED(D_WIDTH-1 downto 0);
-        Y       :out SIGNED(D_WIDTH_in-Truncation-1 downto 0);
+        Y       :out SIGNED(D_WIDTH_in-Truncation-1 downto 0)
     );
 END ENTITY Comb;
 
