@@ -13,7 +13,7 @@ ENTITY Moving_Average IS
         CLK     :in  STD_LOGIC;
         
         X       :in  SIGNED(D_WIDTH-1 downto 0);
-        Y       :out SIGNED(D_WIDTH-1 downto 0);
+        Y       :out SIGNED(D_WIDTH-1 downto 0)
     );
 END ENTITY Moving_Average;
 
@@ -38,7 +38,7 @@ BEGIN
         ELSIF(RISING_EDGE(CLK)) THEN
             FOR i in 0 to 2**POINTS -1 LOOP
                 shift_reg(i) <= shift_reg(i+1);
-            END LOOP
+            END LOOP;
             shift_reg(shift_reg'high) <= X;
             prev_y <= result;
         END IF;
