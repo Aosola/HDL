@@ -13,7 +13,7 @@ ENTITY Decimator IS
         CLK     :in  STD_LOGIC;
         
         X       :in  SIGNED(D_WIDTH-1 downto 0);
-        Y       :out SIGNED(D_WIDTH-1 downto 0);
+        Y       :out SIGNED(D_WIDTH-1 downto 0)
     );
 END ENTITY Decimator;
 
