@@ -13,7 +13,7 @@ ENTITY Average IS
         CLK     :in  STD_LOGIC;
         
         X       :in  SIGNED(D_WIDTH-1 downto 0);
-        Y       :out SIGNED(D_WIDTH-1 downto 0);
+        Y       :out SIGNED(D_WIDTH-1 downto 0)
     );
 END ENTITY Average;
 
@@ -32,7 +32,7 @@ BEGIN
             sum := RESIZE(shift_reg(2**POINTS-1),D_WIDTH-1+2**POINTS);
             FOR i in 0 to shift_reg'high LOOP
                 sum := sum + shift_reg(i);
-            END LOOP
+            END LOOP;
             Y <= RESIZE(SHIFT_RIGHT(sum,POINTS), 2**POINTS);
         END IF;
     END PROCESS;
